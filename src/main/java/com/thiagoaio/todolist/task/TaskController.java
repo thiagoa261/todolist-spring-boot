@@ -61,6 +61,10 @@ public class TaskController {
         if (task == null) 
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Tarefa não encontrada.");
         
+        var userId = request.getAttribute("userId");
+        if(!task.getUserId().equals((UUID) userId)) 
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Acesso negado.");
+
         Utils.copyNonNullProperties(taskModel, task);
 
         var newTask = this.taskRepository.save(taskModel);
