@@ -40,9 +40,9 @@ POST /users/create
 Content-Type: application/json
 
 {
-  "username": "joaosilva",
-  "name": "João Silva",
-  "password": "senha123"
+  "username": "nome",
+  "name": "Nome Completo",
+  "password": "12345"
 }
 ```
 
@@ -65,10 +65,10 @@ Authorization: Basic <base64(username:password)>
 Content-Type: application/json
 
 {
-  "title": "Estudar Spring Boot",
-  "description": "Aprender sobre JPA e autenticação",
+  "title": "Título da tarefa",
+  "description": "Descrição da tarefa",
   "startAt": "2026-01-20T09:00:00",
-  "endAt": "2026-01-20T12:00:00",
+  "endAt": "2026-01-22T12:00:00",
   "priority": "ALTA"
 }
 ```
