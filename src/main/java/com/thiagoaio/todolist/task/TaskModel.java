@@ -12,7 +12,7 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
-@Entity(name = "todo_task")
+@Entity(name = "tasks")
 public class TaskModel {
     @Id
     @GeneratedValue(generator = "UUID")
